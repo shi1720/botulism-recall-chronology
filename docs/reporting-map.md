@@ -19,7 +19,7 @@ Official checklist: https://www.strobe-statement.org/checklists/
 | Exploratory nature and post hoc documentary examples | Methods 2.4; Results 3.4 |
 | Limitations, scope and external validity | Discussion 4.2 |
 | Data and reproducibility | Data and code availability; repository README |
-| Funding, competing interests and final author approval | Must be completed by author before submission; no declarations were invented |
+| Funding, competing interests and final author approval | Author approval and funding status recorded in the conference submission; personal records are kept outside the code repository |
 
 Source processing flow: 29,485 raw records; 29,485 unique recall numbers;
 28,469 records with valid initiation in 2012–2025; 327 matching reason-text

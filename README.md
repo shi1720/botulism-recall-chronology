@@ -67,5 +67,5 @@ https://open.fda.gov/license/ and https://open.fda.gov/terms/ .
 Inclusion is not regulatory endorsement; retain FDA's source disclaimer.
 
 The full manuscript is kept separate from this public code repository while
-ACMT 2027 submission is being prepared. No conference submission or acceptance
-is claimed by this repository. This study has not undergone clinical validation.
+ACMT 2027 abstract review is pending. The abstract was submitted on 16 October
+2026 as submission 7; no acceptance is claimed. This study has not undergone clinical validation.
