@@ -1,0 +1,321 @@
+{
+  "source_sha256": "7f8e2b5bd6e05e0cbf15e43860c74538ad09e1f8b07928e9c92de3ead3dac9c6",
+  "source_meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-10-14",
+    "results": {
+      "skip": 0,
+      "limit": 29485,
+      "total": 29485
+    }
+  },
+  "raw_records": 29485,
+  "unique_records": 29485,
+  "matching_records": 327,
+  "events": 81,
+  "firms": 79,
+  "negative_intervals": [],
+  "multi_start_dates": 0,
+  "multi_report_dates": 0,
+  "classes": {
+    "Class I": {
+      "n": 22,
+      "records": 113,
+      "q": [
+        29.0,
+        44.5,
+        63.25
+      ],
+      "seafood": 18,
+      "min": 20,
+      "max": 1986,
+      "windows": {
+        "30": {
+          "n": 7,
+          "fraction": 0.3181818181818182,
+          "ci": [
+            0.1636059318135624,
+            0.5268140225895724
+          ]
+        },
+        "60": {
+          "n": 16,
+          "fraction": 0.7272727272727273,
+          "ci": [
+            0.5184826598759761,
+            0.8684923971201054
+          ]
+        },
+        "90": {
+          "n": 17,
+          "fraction": 0.7727272727272727,
+          "ci": [
+            0.5656004682477828,
+            0.8987696001475148
+          ]
+        }
+      }
+    },
+    "Class II": {
+      "n": 53,
+      "records": 207,
+      "q": [
+        32.0,
+        43.0,
+        71.0
+      ],
+      "seafood": 30,
+      "min": 18,
+      "max": 317,
+      "windows": {
+        "30": {
+          "n": 13,
+          "fraction": 0.24528301886792453,
+          "ci": [
+            0.1493290210805681,
+            0.3756655768735192
+          ]
+        },
+        "60": {
+          "n": 34,
+          "fraction": 0.6415094339622641,
+          "ci": [
+            0.5069114155535946,
+            0.7569804744719123
+          ]
+        },
+        "90": {
+          "n": 41,
+          "fraction": 0.7735849056603774,
+          "ci": [
+            0.6447372974853895,
+            0.8654536898972573
+          ]
+        }
+      }
+    },
+    "Class III": {
+      "n": 6,
+      "records": 7,
+      "q": [
+        55.75,
+        61.0,
+        61.75
+      ],
+      "seafood": 0,
+      "min": 40,
+      "max": 63,
+      "windows": {
+        "30": {
+          "n": 0,
+          "fraction": 0.0,
+          "ci": [
+            0.0,
+            0.39033428790216546
+          ]
+        },
+        "60": {
+          "n": 2,
+          "fraction": 0.3333333333333333,
+          "ci": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        },
+        "90": {
+          "n": 6,
+          "fraction": 1.0,
+          "ci": [
+            0.6096657120978346,
+            1.0
+          ]
+        }
+      }
+    }
+  },
+  "primary": {
+    "median_difference": -1.5,
+    "bootstrap": {
+      "draws": 20000,
+      "ci": [
+        -16.0,
+        19.5
+      ]
+    },
+    "mann_whitney_p": 0.9767824125532897,
+    "adjusted": {
+      "n": 75,
+      "firms": 74,
+      "ratio": 0.6898039136742414,
+      "ci": [
+        0.39945137985382084,
+        1.1912073992445087
+      ],
+      "p": 0.17968996834440282,
+      "coef": {
+        "Intercept": 4.122038047879908,
+        "seafood[T.True]": 0.26406711456136683,
+        "class_ii": -0.37134790485930513,
+        "year_c": -0.08531339871438523
+      },
+      "condition_number": 15.887226035188082,
+      "max_cooks_d": 0.3218538400111827
+    }
+  },
+  "sensitivity": {
+    "exclude_2012": {
+      "adjusted": {
+        "n": 71,
+        "firms": 70,
+        "ratio": 0.8087918684890832,
+        "ci": [
+          0.5042434764212279,
+          1.2972786305074824
+        ],
+        "p": 0.3733563283718798,
+        "coef": {
+          "Intercept": 4.08807102149324,
+          "seafood[T.True]": 0.13992725278147822,
+          "class_ii": -0.21221366512329543,
+          "year_c": -0.08228269593928947
+        },
+        "condition_number": 15.731008428625776,
+        "max_cooks_d": 0.1395226750911319
+      },
+      "median_difference": 6.5
+    },
+    "since_2017": {
+      "adjusted": {
+        "n": 39,
+        "firms": 38,
+        "ratio": 0.9500291717027916,
+        "ci": [
+          0.7221666475760854,
+          1.2497883004091537
+        ],
+        "p": 0.7070363865077656,
+        "coef": {
+          "Intercept": 3.7012458992468003,
+          "seafood[T.True]": -0.2091523095515465,
+          "class_ii": -0.05126258780343251,
+          "year_c": 0.012972117724813527
+        },
+        "condition_number": 16.985384663146668,
+        "max_cooks_d": 0.1663855392946343
+      },
+      "median_difference": -0.5
+    },
+    "exclude_cronobacter": {
+      "adjusted": {
+        "n": 72,
+        "firms": 71,
+        "ratio": 0.6841093340279358,
+        "ci": [
+          0.38752383179852956,
+          1.2076820636606889
+        ],
+        "p": 0.18710394853306184,
+        "coef": {
+          "Intercept": 4.125974274508215,
+          "seafood[T.True]": 0.26917927157594357,
+          "class_ii": -0.379637529063367,
+          "year_c": -0.08518580095708475
+        },
+        "condition_number": 15.716337131044888,
+        "max_cooks_d": 0.31855259299062444
+      },
+      "median_difference": 5.0
+    },
+    "latest_report": {
+      "adjusted": {
+        "n": 75,
+        "firms": 74,
+        "ratio": 0.6898039136742414,
+        "ci": [
+          0.39945137985382084,
+          1.1912073992445087
+        ],
+        "p": 0.17968996834440282,
+        "coef": {
+          "Intercept": 4.122038047879908,
+          "seafood[T.True]": 0.26406711456136683,
+          "class_ii": -0.37134790485930513,
+          "year_c": -0.08531339871438523
+        },
+        "condition_number": 15.887226035188082,
+        "max_cooks_d": 0.3218538400111827
+      },
+      "median_difference": -1.5
+    },
+    "all_event_records": {
+      "adjusted": {
+        "n": 75,
+        "firms": 74,
+        "ratio": 0.6898039136742414,
+        "ci": [
+          0.39945137985382084,
+          1.1912073992445087
+        ],
+        "p": 0.17968996834440282,
+        "coef": {
+          "Intercept": 4.122038047879908,
+          "seafood[T.True]": 0.26406711456136683,
+          "class_ii": -0.37134790485930513,
+          "year_c": -0.08531339871438523
+        },
+        "condition_number": 15.887226035188082,
+        "max_cooks_d": 0.3218538400111827
+      },
+      "median_difference": -1.5
+    }
+  },
+  "leave_one_out_ratio_range": [
+    0.6194061914105583,
+    0.8195259443957889
+  ],
+  "threshold_composition": {
+    "30": {
+      "n": 20,
+      "class_i": 7
+    },
+    "60": {
+      "n": 52,
+      "class_i": 16
+    },
+    "90": {
+      "n": 64,
+      "class_i": 17
+    }
+  },
+  "year_counts": {
+    "2012": 4,
+    "2013": 12,
+    "2014": 9,
+    "2015": 11,
+    "2016": 5,
+    "2017": 6,
+    "2018": 6,
+    "2019": 4,
+    "2021": 2,
+    "2022": 5,
+    "2023": 1,
+    "2024": 3,
+    "2025": 13
+  },
+  "seafood_cross_tab": {
+    "Class I": {
+      "false": 4,
+      "true": 18
+    },
+    "Class II": {
+      "false": 23,
+      "true": 30
+    },
+    "Class III": {
+      "false": 6,
+      "true": 0
+    }
+  }
+}
