@@ -127,7 +127,7 @@ def figures(e,s):
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,
         'axes.spines.right':False,'savefig.dpi':220,'axes.titleweight':'bold'})
     colors={'Class I':'#a33b35','Class II':'#24658a','Class III':'#929ca5'}
-    fig,ax=plt.subplots(figsize=(7,3.8))
+    fig,ax=plt.subplots(figsize=(7,3.2))
     for c,g in e.groupby('classification',sort=True):
         x=np.sort(g.days); y=np.arange(1,len(x)+1)/len(x)
         ax.step(x,y,where='post',label=f'{c} (n={len(g)})',color=colors[c],lw=2)
@@ -136,7 +136,7 @@ def figures(e,s):
     ax.set_xticks([20,30,60,90,180,365,730,2000],labels=['20','30','60','90','180','365','730','2000'])
     ax.legend(frameon=False,loc='lower right'); ax.grid(alpha=.15);fig.tight_layout()
     fig.savefig(ROOT/'figures/01_intervals.png');fig.savefig(ROOT/'figures/01_intervals.pdf');plt.close(fig)
-    fig,axes=plt.subplots(1,2,figsize=(7,3.5))
+    fig,axes=plt.subplots(1,2,figsize=(7,3.2))
     for c,g in e.groupby('classification',sort=True):
         k=['Class I','Class II','Class III'].index(c)
         rng=np.random.default_rng(SEED+k)
@@ -151,7 +151,7 @@ def figures(e,s):
     axes[1].set(xticks=x,xticklabels=[str(t) for t in ts],xlabel='Interval threshold (days)',ylabel='Proportion at or below threshold',ylim=(0,1.03),title='B  Threshold summaries')
     axes[1].legend(frameon=False);fig.tight_layout();fig.savefig(ROOT/'figures/02_thresholds.png');fig.savefig(ROOT/'figures/02_thresholds.pdf');plt.close(fig)
     labels=['Events','Product entries','Events\n<=30 days','Events\n<=60 days','Events\n<=90 days'];totals=[len(e),e.n_products.sum()]+[s['threshold_composition'][str(t)]['n'] for t in ts]
-    fig,ax=plt.subplots(figsize=(7,3.5));bottom=np.zeros(5)
+    fig,ax=plt.subplots(figsize=(7,3.2));bottom=np.zeros(5)
     for c in ['Class I','Class II','Class III']:
         counts=[int((e.classification==c).sum()),int(e.loc[e.classification==c,'n_products'].sum())]+[int(((e.classification==c)&(e.days<=t)).sum()) for t in ts]
         v=np.array(counts)/totals*100
