@@ -1,0 +1,14 @@
+{
+  "source_records": 29485,
+  "selected_records": 327,
+  "events": 81,
+  "normalized_firms": 79,
+  "primary_events": 75,
+  "primary_firms": 74,
+  "bootstrap_draws": 20000,
+  "independent_weighted_median_ci": [
+    -16.0,
+    19.5
+  ],
+  "implementation": "Raw standard-library grouping; frequency-weighted central ranks, no concatenated cluster samples; no import of primary analysis."
+}

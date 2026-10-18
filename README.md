@@ -69,3 +69,7 @@ Inclusion is not regulatory endorsement; retain FDA's source disclaimer.
 The full manuscript is kept separate from this public code repository while
 ACMT 2027 abstract review is pending. The abstract was submitted on 16 October
 2026 as submission 7; no acceptance is claimed. This study has not undergone clinical validation.
+
+## Independent journal-review audit
+
+Run `python tests/independent_bootstrap_audit.py` after installing the pinned dependencies. It independently groups the frozen raw archive and checks the 81-event/79-firm cohort, then reproduces the primary 20,000-draw bootstrap interval through frequency-weighted central ranks, without importing the primary analysis or reading its derived event table. The recorded result is `results/independent_audit.json`. The analysis and original numerical results are unchanged.
